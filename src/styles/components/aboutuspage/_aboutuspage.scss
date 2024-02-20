@@ -1,0 +1,609 @@
+//resturant branches
+.resturant-branches {
+  &_wrapper {
+    @include respond(desktopIpad) {
+      padding: rem(40) rem(90);
+    }
+
+    @include respond(mobile) {
+      padding: rem(50) rem(20);
+    }
+
+    background-color: $white;
+  }
+
+  &_headingtext {
+    h1 {
+      text-align: center;
+      font-family: 'Kristi', cursive;
+      font-size: rem(70);
+      font-style: italic;
+      // line-height: 50px;
+      color: #733722;
+      margin-bottom: 0;
+      line-height: 0.8;
+
+      @include respond(mobile) {
+        padding-bottom: rem(20);
+      }
+    }
+
+    h2 {
+      text-align: center;
+      font-weight: 200;
+      text-transform: uppercase;
+      letter-spacing: rem(-3);
+      color: #222222;
+      font-style: normal;
+      font-size: rem(60);
+    }
+  }
+
+  &_address {
+    padding: rem(20) 0;
+
+    .address-container {
+      @include respond(mobile) {
+        padding: rem(20) 0;
+      }
+
+      h1 {
+        font-size: rem(14);
+        font-weight: 700;
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        color: #333333;
+        text-transform: uppercase;
+        letter-spacing: rem(0.6);
+      }
+
+      p,
+      span {
+        max-width: 94%;
+        font-size: rem(14);
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        color: #333333;
+        font-weight: 400;
+        letter-spacing: rem(0.5);
+        line-height: 1.8;
+      }
+
+      h3 {
+        font-size: rem(16);
+        font-weight: 400;
+        font-family: 'Lato', sans-serif;
+        font-style: normal;
+        color: #242424;
+        letter-spacing: rem(0.2);
+      }
+    }
+
+  }
+}
+
+//philosophy-container
+
+.philosophy-container {
+  @include respond(desktopIpad) {
+    padding: rem(50) rem(90);
+    display: flex;
+    justify-content: end;
+    background-color: $white;
+    position: relative;
+
+    .philosophy-image {
+      max-width: rem(800);
+      max-height: rem(600);
+    }
+  }
+
+  @include respond(mobile) {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: $white;
+
+    .philosophy-image {
+      max-width: 100%;
+      // max-height: rem(226);
+    }
+  }
+
+  @include respond(desktopIpad) {
+    .ourphilosophy-textcontainer {
+      position: absolute;
+      max-width: 40%;
+      left: rem(70);
+      top: rem(180);
+      // bottom: 0;
+      width: 40%;
+      padding: rem(50);
+      z-index: 2;
+      transform: translate3d(0px, 71.1px, 0px);
+      background-color: $white;
+      letter-spacing: rem(0.01);
+
+      // padding: rem(50);
+      .text {
+        margin: 0 auto;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        opacity: 0.9;
+        font-size: rem(14);
+      }
+
+      .our-text {
+        letter-spacing: 0 !important;
+        font-family:  'Kristi', cursive;
+        font-size: rem(70);
+        margin-bottom: 0;
+        color: #733722;
+        line-height: 0.8;
+      }
+
+      .john-text {
+        font-family:  'Kristi', cursive;
+        color: #333333;
+        font-size: rem(40);
+        font-weight: 600;
+        letter-spacing: 4px;
+      }
+
+      h2 {
+        font-size: rem(60);
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: -4px;
+        color: #222222;
+        line-height: 1;
+        font-family: 'Lato', sans-serif;
+      }
+
+      p:nth-child(3) {
+        // padding-top: 0.5rem;
+        // padding-bottom: 0.5rem;
+        line-height: 1.4;
+      }
+
+      p:last-child {
+        font-family: Kristi;
+        font-size: rem(40);
+        font-weight: 600;
+        padding-top: rem(30);
+        padding-bottom: rem(20);
+        letter-spacing: rem(-4);
+      }
+    }
+  }
+
+  @include respond(ipadpro) {
+    .philosophy-image {
+      max-width: 75%;
+    }
+
+    .ourphilosophy-textcontainer {
+      top: rem(100);
+      // padding: rem(15);
+      background-color: #FFFFFF;
+
+      h2 {
+        font-size: rem(45);
+      }
+
+      .our-description-text {
+        color: rgba(18, 18, 18, 0.8);
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 180.023%;
+      }
+    }
+  }
+
+  @include respond(ipad) {
+    display: block;
+
+    .philosophy-image {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    .ourphilosophy-textcontainer {
+      position: relative;
+      max-width: 100%;
+      width: 100%;
+      top: 0px;
+      left: 0px;
+    }
+
+    .our-description-text {
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  @include respond(mobile) {
+    padding: rem(50) rem(20);
+
+    .ourphilosophy-textcontainer {
+      padding-inline: rem(0);
+      margin-bottom: rem(50);
+    }
+
+    .text {
+      max-width: rem(300);
+      margin: 0 auto;
+      font-family: 'Lato', sans-serif;
+      font-weight: 400;
+      opacity: 0.9;
+      font-size: rem(14);
+    }
+
+    .our-text {
+      letter-spacing: 0 !important;
+      font-family: Kristi;
+      font-size: rem(40);
+      // line-height: rem(50);
+      margin-bottom: 0 !important;
+      color: #733722;
+    }
+
+    .john-text {
+      font-family: Kristi;
+      color: #333333;
+      font-size: rem(40);
+      font-weight: 600;
+      letter-spacing: 4px;
+    }
+
+    h2 {
+      font-size: rem(30);
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: -2px;
+      color: #222222;
+      font-family: 'Lato', sans-serif;
+      line-height: 0.8;
+    }
+
+    p:nth-child(3) {
+      // padding-top: 0.5rem;
+      // padding-bottom: 0.5rem;
+      line-height: 1.8;
+    }
+
+    p:last-child {
+      font-family: Kristi;
+      font-size: rem(40);
+      font-weight: 600;
+      padding-top: rem(30);
+      padding-bottom: rem(20);
+      letter-spacing: rem(-4);
+    }
+  }
+}
+
+//dinning container
+.dining-container {
+  display: flex;
+  background-color: $white;
+
+  @include respond(desktopIpad) {
+    position: relative;
+    padding: rem(50) rem(90);
+
+    .ourphilosophy-textcontainer {
+      position: absolute;
+      max-width: 40%;
+      right: rem(180);
+      top: rem(90);
+      width: 40%;
+      padding: rem(50);
+      z-index: 2;
+      transform: translate3d(0px, 63.4172px, 0px);
+      background-color: $white;
+      letter-spacing: rem(0.01);
+
+      padding: rem(50);
+
+      .text {
+        margin: 0 auto;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        opacity: 0.9;
+        letter-spacing: rem(1);
+        font-size: rem(14);
+        line-height: 1.4;
+      }
+
+      .sub-text {
+        margin: rem(10) 0 rem(20) 0;
+        font-size: rem(12);
+        color: #424242;
+        letter-spacing: rem(2);
+        text-transform: uppercase;
+      }
+
+      .dining-text {
+        letter-spacing: 0 !important;
+        font-family:  'Kristi', cursive;
+        font-size: rem(70);
+        margin-bottom: 0;
+        color: #733722;
+        line-height: 0.8;
+      }
+
+      .john-text {
+        font-family:  'Kristi', cursive;
+        color: #333333;
+        font-size: rem(40);
+        font-weight: 600;
+        letter-spacing: 4px;
+      }
+
+      h2 {
+        font-size: rem(60);
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: -4px;
+        color: #222222;
+        line-height: 1;
+        font-family: 'Lato', sans-serif;
+      }
+
+      p:nth-child(3) {
+        line-height: 1.4;
+      }
+
+
+      // @include respond(mobile) {
+      //   padding: rem(30) rem(0);
+      //   text-align: center;
+      //   .text {
+      //     max-width: rem(300);
+      //     margin: 0 auto;
+      //     font-family: 'Lato', sans-serif;
+      //     font-weight: 400;
+      //     opacity: 0.9;
+      //     font-size: rem(14);
+      //   }
+      //   .our-text {
+      //     letter-spacing: 0 !important;
+      //     font-family: Kristi;
+      //     font-size: rem(40);
+      //     // line-height: rem(50);
+      //     margin-bottom: 0 !important;
+      //     color: #cfa670;
+      //   }
+      //   .john-text {
+      //     font-family: Kristi;
+      //     color: #333333;
+      //     font-size: rem(40);
+      //     font-weight: 600;
+      //     letter-spacing: 4px;
+      //   }
+      //   h2 {
+      //     font-size: rem(30);
+      //     font-weight: 400;
+      //     text-transform: uppercase;
+      //     letter-spacing: -2px;
+      //     color: #222222;
+      //     font-family: 'Lato', sans-serif;
+      //     line-height: 0.8;
+      //   }
+      //   p:nth-child(3) {
+      //     // padding-top: 0.5rem;
+      //     // padding-bottom: 0.5rem;
+      //     line-height: 1.8;
+      //   }
+      //   p:last-child {
+      //     font-family: Kristi;
+      //     font-size: rem(40);
+      //     font-weight: 600;
+      //     padding-top: rem(30);
+      //     padding-bottom: rem(20);
+      //     letter-spacing: rem(-4);
+      //   }
+      // }
+    }
+  }
+
+  @include respond(ipadpro) {
+    .ourphilosophy-textcontainer {
+      top: rem(55);
+      right: rem(40);
+    }
+  }
+
+  @include respond(ipad) {
+    flex-direction: column-reverse;
+    // padding: rem(50) rem(20);
+
+
+    .ourphilosophy-textcontainer {
+      position: relative;
+      top: 0px;
+      right: 0px;
+      padding: rem(0);
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: rem(50);
+
+      .text {
+        margin: 0 auto;
+        font-family: 'Lato', sans-serif;
+        font-weight: 500;
+        opacity: 0.9;
+        font-size: rem(18);
+        line-height: 1.5;
+        letter-spacing: rem(.25);
+      }
+    }
+  }
+
+  @include respond(mobile) {
+    flex-direction: column-reverse;
+    padding: rem(50) rem(20);
+
+    .ourphilosophy-textcontainer {
+      background-color: $white;
+      letter-spacing: rem(0.01);
+      padding: rem(0) rem(0) rem(50);
+
+      .text {
+        margin: 0 auto;
+        font-family: 'Lato', sans-serif;
+        font-weight: 400;
+        opacity: 0.9;
+        font-size: rem(14);
+        line-height: 1.5;
+        letter-spacing: rem(.25);
+      }
+
+      .sub-text {
+        margin: rem(10) 0 rem(20) 0;
+        font-size: rem(12);
+        color: #424242;
+        letter-spacing: rem(2);
+        text-transform: uppercase;
+      }
+
+      .dining-text {
+        letter-spacing: 0 !important;
+        font-family: Kristi;
+        font-size: rem(70);
+        margin-bottom: 0;
+        color: #733722;
+        line-height: 0.8;
+      }
+
+      .john-text {
+        font-family: Kristi;
+        color: #333333;
+        font-size: rem(40);
+        font-weight: 600;
+        letter-spacing: 4px;
+      }
+
+      h2 {
+        font-size: 1.875rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: rem(.25);
+        color: #222222;
+        line-height: 1;
+        font-family: 'Lato', sans-serif;
+      }
+
+      p:nth-child(3) {
+        // padding-top: 0.5rem;
+        // padding-bottom: 0.5rem;
+        line-height: 1.4;
+      }
+
+      // p:last-child {
+      //   font-family: Kristi;
+      //   font-size: rem(40);
+      //   font-weight: 600;
+      //   padding-top: rem(30);
+      //   padding-bottom: rem(20);
+      //   letter-spacing: rem(-4);
+      // }
+    }
+
+    // @include respond(mobile) {
+    //   padding: rem(30) rem(20);
+    //   text-align: center;
+    //   .text {
+    //     max-width: rem(300);
+    //     margin: 0 auto;
+    //     font-family: 'Lato', sans-serif;
+    //     font-weight: 400;
+    //     opacity: 0.9;
+    //     font-size: rem(14);
+    //   }
+    //   .our-text {
+    //     letter-spacing: 0 !important;
+    //     font-family: Kristi;
+    //     font-size: rem(40);
+    //     // line-height: rem(50);
+    //     margin-bottom: 0 !important;
+    //     color: #cfa670;
+    //   }
+    //   .john-text {
+    //     font-family: Kristi;
+    //     color: #333333;
+    //     font-size: rem(40);
+    //     font-weight: 600;
+    //     letter-spacing: 4px;
+    //   }
+    //   h2 {
+    //     font-size: rem(30);
+    //     font-weight: 400;
+    //     text-transform: uppercase;
+    //     letter-spacing: -2px;
+    //     color: #222222;
+    //     font-family: 'Lato', sans-serif;
+    //     line-height: 0.8;
+    //   }
+    //   p:nth-child(3) {
+    //     // padding-top: 0.5rem;
+    //     // padding-bottom: 0.5rem;
+    //     line-height: 1.8;
+    //   }
+    //   p:last-child {
+    //     font-family: Kristi;
+    //     font-size: rem(40);
+    //     font-weight: 600;
+    //     padding-top: rem(30);
+    //     padding-bottom: rem(20);
+    //     letter-spacing: rem(-4);
+    //   }
+    // }
+  }
+
+  .philosophy-image {
+    @include respond(desktopIpad) {
+      max-width: rem(700);
+      max-height: rem(525);
+    }
+
+    @include respond(ipadpro) {
+      max-width: rem(600);
+      max-height: rem(525);
+    }
+
+    @include respond(mobile) {
+      width: 100%;
+      max-height: rem(300);
+    }
+  }
+}
+
+//slider wrapper
+.slider-wrapper {
+  background-image: url("/aboutUsImages/ex-slider-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+
+  @include respond(desktopIpad) {
+    min-width: 100%;
+
+    min-height: rem(440);
+    padding: rem(50) rem(90);
+  }
+
+  @include respond(mobile) {
+    background-image: url("/aboutUsImages/ex-slider-bg-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    max-height: rem(502);
+    min-height: auto;
+    padding: 0px 0px 40px;
+  }
+}

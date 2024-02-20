@@ -1,0 +1,145 @@
+.contactus-wrapper {
+  background-color: $white;
+
+  @include respond(desktopIpad) {
+    padding: rem(50) rem(90);
+
+    .headingText-container {
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      color: #333333;
+
+      h1 {
+        font-size: rem(30);
+        text-transform: uppercase;
+        letter-spacing: rem(-1);
+        font-weight: 300;
+        max-width: 60%;
+        margin: 0 auto;
+        line-height: 1.8;
+      }
+
+      p {
+        max-width: 80%;
+        margin: 0 auto;
+        font-weight: 400;
+        font-size: rem(14);
+        line-height: 1.6;
+        padding: rem(20) 0 rem(50);
+      }
+    }
+
+    .image-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      .contactus-image {
+        max-width: rem(830);
+        max-height: rem(570);
+      }
+
+      .form-wrapper {
+        position: absolute;
+        background-color: white;
+        right: rem(0);
+        top: 9.4rem;
+        padding: rem(20) rem(30);
+        min-width: rem(560);
+      }
+    }
+
+    .contactus-mapcontainer {
+      padding-top: rem(100);
+
+    }
+  }
+
+  @include respond(ipadpro) {
+    .image-container {
+      .contactus-image {
+        max-width: 75%;
+      }
+
+      .form-wrapper {
+        top: rem(4);
+        padding: rem(20) rem(20);
+        min-width: rem(380);
+      }
+    }
+
+  }
+
+  @include respond(ipad) {
+    .image-container {
+      // position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .contactus-image {
+        max-width: 100%;
+      }
+
+      .form-wrapper {
+        position: relative;
+        background-color: white;
+        // right: rem(0);
+        padding: rem(20) 0;
+        min-width: 100%;
+        margin-bottom: rem(50);
+      }
+    }
+  }
+
+  @include respond(mobile) {
+    padding: rem(50) rem(20);
+
+    .headingText-container {
+      text-align: center;
+      font-family: 'Lato', sans-serif;
+      color: #333333;
+
+      h1 {
+        font-size: rem(24);
+        text-transform: uppercase;
+        letter-spacing: rem(-1);
+        font-weight: 300;
+
+        line-height: 1.8;
+      }
+
+      p {
+
+        font-weight: 400;
+        font-size: rem(12);
+        line-height: 1.6;
+        padding: rem(20) 0 rem(50);
+      }
+    }
+
+    .image-container {
+      // position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .contactus-image {
+        max-width: 100%;
+      }
+
+      .form-wrapper {
+        // position: absolute;
+        background-color: white;
+        // right: rem(0);
+        padding: rem(20) 0;
+        min-width: 100%;
+      }
+    }
+
+    .contactus-mapcontainer {
+      padding-top: rem(50);
+
+    }
+  }
+}

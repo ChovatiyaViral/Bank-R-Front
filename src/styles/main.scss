@@ -1,0 +1,28 @@
+//helpers
+@import "./helper/mixin";
+
+//Base
+@import "./base/variables";
+@import "./base/fonts";
+@import "./base/body";
+
+//components
+@import './components/commonComponents/header';
+@import './components/homepage/homepage';
+@import './components/privacypolicypage/privacypolicypage';
+@import './components/commonComponents/slickslider';
+@import './components/commonComponents/footer';
+@import './components/commonComponents/topheader';
+@import './components/commonComponents/calender';
+@import './components/menupage/menu';
+@import './components/duncanWhiskiesPage/duncanwhiskies';
+@import './components/aboutuspage/aboutuspage';
+@import './components/pressRelease/pressRelease';
+@import "./components/contactuspage/contactusform";
+@import "./components/contactuspage/contactuspage";
+@import './components/commonComponents/googlemaps';
+@import "./components/commonComponents/forms";
+@import "./components/reservationpage/reservation";
+@import "./components/commonComponents/hamburger";
+@import "./components/commonComponents/imageModal";
+@import './components/commonStyles/commonStyle';

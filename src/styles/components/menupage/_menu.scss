@@ -1,0 +1,650 @@
+//menucomponent
+.menupage {
+  &-wrapper {
+    background-image: url("/upload/abreakey-raw-foodphotography-squid-still-life.jpg");
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+
+    &::after {
+      background-image: linear-gradient(transparent 0%, transparent 50%, rgba(0, 0, 0, 0.1) 76%, rgba(0, 0, 0, 0.4) 93%, rgba(0, 0, 0, 0.59) 100%);
+      z-index: 2;
+    }
+
+    @include respond(desktopIpad) {
+      min-height: rem(470);
+    }
+
+    @include respond(mobile) {
+      min-height: rem(470);
+    }
+
+    .parallax_title {
+      position: absolute;
+      font-weight: 300;
+
+      @include respond(desktopIpad) {
+        bottom: rem(20);
+        transform: translateX(rem(550));
+        letter-spacing: rem(-4);
+        // line-height: 1;
+
+        p {
+          font-family:  'Kristi', cursive;
+          font-size: rem(70);
+          font-weight: 400;
+          color: white;
+          font-style: italic;
+          text-align: center;
+          margin-bottom: rem(-10);
+          letter-spacing: rem(2);
+          font-family:  'Kristi', cursive;
+        }
+
+        span {
+          color: $white;
+          font-size: rem(60);
+          text-transform: uppercase;
+          text-shadow: none;
+          letter-spacing: -4px;
+          lighting-color: white;
+          // bottom: rem(20);
+          font-weight: 200;
+        }
+      }
+
+      @include respond(mobile) {
+        bottom: rem(10);
+        transform: translateX((40%));
+        letter-spacing: rem(-4);
+        // line-height: 1;
+
+        p {
+          font-family: Kristi;
+          font-size: rem(60);
+          letter-spacing: rem(2);
+          font-family: Kristi;
+          color: #cfa670;
+          font-style: italic;
+          text-align: center;
+          font-weight: 400;
+          margin-bottom: rem(-10);
+          letter-spacing: rem(2);
+        }
+
+        span {
+          color: $white;
+          font-size: rem(50);
+          text-transform: uppercase;
+          text-shadow: none;
+          letter-spacing: -4px;
+          lighting-color: white;
+          // bottom: rem(20);
+        }
+      }
+    }
+  }
+}
+
+.maincourse-container {
+  .star {
+    &.star_tag {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      font-family: 'Lato', sans-serif;
+      border-radius: 20px;
+      background: rgba(77, 2, 16, 0.12);
+      color: #4D0210;
+      padding: 5px 9px;
+      top: 24px;
+      height: fit-content;
+
+      svg {
+        width: 12px;
+        height: 12px;
+        path {
+          fill: #4D0210;
+        }
+      }
+    }
+  }
+}
+
+
+//chief recomended
+.chief-recomended-wrapper {
+  background-image: url("/upload/223_1r140806_eat_spots_sobanndls.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  background-attachment: fixed;
+  z-index: 2;
+
+  ::after {
+    background-image: linear-gradient(transparent 0%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.1) 76%,
+        rgba(0, 0, 0, 0.4) 93%,
+        rgba(0, 0, 0, 0.59) 100%);
+    z-index: 2;
+  }
+
+  @include respond(desktopIpad) {
+    min-height: rem(540);
+  }
+
+  @include respond(mobile) {
+    min-height: rem(540);
+  }
+
+  .parallax_title {
+    position: absolute;
+    font-weight: 300;
+
+    @include respond(desktopIpad) {
+      bottom: rem(30);
+      transform: translateX(rem(450));
+      letter-spacing: rem(-4);
+      line-height: 1;
+
+      p {
+        font-family: Kristi;
+        font-size: rem(60);
+        font-weight: normal;
+        color: #cfa670;
+        font-style: italic;
+        text-align: center;
+        letter-spacing: rem(2);
+        margin-bottom: rem(0);
+      }
+
+      span {
+        color: $white;
+        font-size: rem(60);
+        text-transform: uppercase;
+        text-shadow: none;
+        letter-spacing: -4px;
+        lighting-color: white;
+      }
+    }
+
+    @include respond(mobile) {
+      bottom: rem(30);
+      transform: translateX(22%);
+      letter-spacing: rem(-2);
+      line-height: 1;
+
+      p {
+        font-family: Kristi;
+        font-size: rem(50);
+        font-weight: normal;
+        color: #cfa670;
+        font-style: italic;
+        text-align: center;
+        letter-spacing: rem(2);
+        margin-bottom: rem(0);
+      }
+
+      span {
+        color: $white;
+        font-size: rem(40);
+        text-transform: uppercase;
+        text-shadow: none;
+        letter-spacing: -4px;
+        lighting-color: white;
+      }
+    }
+  }
+}
+
+
+//   wine slection
+.wineselection-wrapper {
+  background-image: url("/upload/139_1r120711_chimag_drinks_0722_lb.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  background-attachment: fixed;
+
+  &::after {
+    background-image: linear-gradient(transparent 0%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.1) 76%,
+        rgba(0, 0, 0, 0.4) 93%,
+        rgba(0, 0, 0, 0.59) 100%);
+    z-index: 2;
+  }
+
+  @include respond(desktopIpad) {
+    min-height: rem(540);
+  }
+
+  @include respond(mobile) {
+    min-height: rem(540);
+  }
+
+  .parallax_title {
+    position: absolute;
+    font-weight: 300;
+
+    @include respond(desktopIpad) {
+      bottom: rem(30);
+      transform: translateX(rem(530));
+      letter-spacing: rem(-4);
+      line-height: 1;
+
+      p {
+        font-family: Kristi;
+        font-size: rem(60);
+        font-weight: normal;
+        color: #cfa670;
+        font-style: italic;
+        text-align: center;
+        letter-spacing: rem(2);
+        margin-bottom: rem(0);
+      }
+
+      span {
+        color: $white;
+        font-size: rem(60);
+        text-transform: uppercase;
+        text-shadow: none;
+        letter-spacing: -4px;
+        lighting-color: white;
+      }
+    }
+
+    @include respond(mobile) {
+      bottom: rem(30);
+      transform: translateX(55%);
+      letter-spacing: rem(-2);
+      line-height: 1;
+
+      p {
+        font-family: Kristi;
+        font-size: rem(50);
+        font-weight: normal;
+        color: #cfa670;
+        font-style: italic;
+        text-align: center;
+        letter-spacing: rem(2);
+        margin-bottom: rem(0);
+      }
+
+      span {
+        color: $white;
+        font-size: rem(40);
+        text-transform: uppercase;
+        text-shadow: none;
+        letter-spacing: -4px;
+        lighting-color: white;
+      }
+    }
+  }
+}
+
+
+
+
+
+//  menu page main course-component
+.menupage-menuofDay-container {
+  background-color: $white;
+
+  @include respond(desktopIpad) {
+    padding: rem(50) rem(90);
+
+    .inner-wrapper {
+      max-width: rem(320);
+      margin: 0 auto;
+      font-family: 'Lato', sans-serif;
+
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 1px;
+        line-height: 1.2em;
+        letter-spacing: 2px;
+        font-weight: 400;
+        margin: 0 auto;
+        font-family: 'Lato';
+        font-size: rem(30);
+
+        @include respond(mobile){
+          font-size: rem(25);
+        }
+      }
+
+      margin-bottom: 10px;
+    }
+
+    .inner-cardwrapper {
+      letter-spacing: 0;
+      max-width: 97%;
+      background-color: $white;
+      color: $black;
+
+      h4 {
+        font-size: rem(16);
+        position: relative;
+        font-weight: 600;
+
+        .currency {
+          position: absolute;
+          right: 0;
+          font-weight: 600;
+        }
+      }
+
+      .cardsubtext {
+        max-width: calc(80% - 75px);
+        font-size: rem(11);
+        color: #424242;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+      }
+
+      position: relative;
+
+      .order {
+        background-color: #cfa670;
+        text-align: center;
+        padding: rem(4) rem(9);
+        color: #fff;
+        float: right;
+        font-size: rem(10);
+        position: relative;
+        top: rem(2);
+        font-weight: 600;
+        border-radius: rem(3);
+        right: rem(20);
+        text-transform: uppercase;
+      }
+
+      .star {
+        background-color: #cfa670;
+        text-align: center;
+        padding: rem(4) rem(5);
+        color: #fff;
+        font-size: rem(8);
+        position: absolute;
+        font-weight: 600;
+        border-radius: rem(3);
+        right: 0;
+        bottom: rem(-2);
+      }
+    }
+  }
+
+  @include respond(mobile) {
+    padding: rem(50) rem(15);
+
+    .inner-wrapper {
+      max-width: rem(280);
+      margin: 0 auto;
+      font-family: 'Lato', sans-serif;
+
+      h2 {
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 1px;
+        line-height: 1.2em;
+        letter-spacing: 2px;
+        font-weight: 400;
+        margin: 0 auto;
+      }
+
+      margin-bottom: 10px;
+    }
+
+    .inner-cardwrapper {
+      letter-spacing: 0;
+      max-width: 98%;
+      background-color: $white;
+      color: $black;
+
+      .cardheading {
+        font-family: 'Lato', sans-serif;
+        font-size: rem(16);
+        font-weight: 600;
+      }
+      
+
+      h4 {
+        font-size: rem(16);
+        position: relative;
+        font-family: 'Lato', sans-serif;
+
+        .currency {
+          position: absolute;
+          max-width: calc(100% - 25px);
+
+          right: 0;
+        }
+      }
+
+      .cardsubtext {
+        max-width: calc(80% - 75px);
+        font-size: rem(11);
+        color: #424242;
+        font-family: 'Lato', sans-serif;
+        text-transform: uppercase;
+      }
+
+      position: relative;
+
+      .order {
+        background-color: #cfa670;
+        text-align: center;
+        padding: rem(3) rem(7);
+        color: #fff;
+        float: right;
+        font-size: rem(10);
+        position: relative;
+        top: rem(2);
+        font-weight: 600;
+        border-radius: rem(3);
+        right: rem(20);
+        text-transform: uppercase;
+      }
+
+      .star {
+        background-color: #cfa670;
+        text-align: center;
+        padding: rem(4);
+        color: #fff;
+        font-size: rem(8);
+        position: absolute;
+        font-weight: 600;
+        border-radius: rem(3);
+        right: 0;
+        bottom: rem(-2);
+      }
+    }
+  }
+}
+
+//   .card-image {
+//     height: auto;
+//     width: 100%;
+//   }
+
+.menupagecard-wrapper {
+  position: relative;
+
+  &:hover {
+    .menupagecard-afterhower {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .inner-cardwrapper {
+    letter-spacing: 0;
+    max-width: 100%;
+    padding: rem(20) rem(10);
+    background-color: $white;
+    color: $black;
+    min-height: rem(115);
+    font-family: 'Lato', sans-serif;
+
+    h4 {
+      font-size: rem(16);
+      position: relative;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      //   .currency {
+      //     position: absolute;
+      //     right: 0;
+      //     font-weight: 600;
+      //   }
+    }
+
+    p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cardsubtext {
+      max-width: calc(80% - 75px);
+      font-size: rem(11);
+      color: #424242;
+      font-family: 'Lato', sans-serif;
+      text-transform: uppercase;
+    }
+
+    position: relative;
+
+    .order {
+      background-color: #cfa670;
+      text-align: center;
+      padding: rem(4) rem(9);
+      color: #fff;
+      float: right;
+      font-size: rem(10);
+      position: relative;
+      top: rem(2);
+      font-weight: 600;
+      border-radius: rem(3);
+      //   right: rem(20);
+      text-transform: uppercase;
+    }
+
+    .star {
+      background-color: #cfa670;
+      text-align: center;
+      padding: rem(4) rem(5);
+      color: #fff;
+      font-size: rem(8);
+      //   position: absolute;
+      font-weight: 600;
+      border-radius: rem(3);
+      margin-left: rem(10);
+      //   right: 0;
+      //   bottom: rem(33);
+    }
+  }
+}
+
+.menupagecard-afterhower {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+
+  top: 30%;
+
+  left: 35%;
+
+  // transition: all 0.4s ease;
+  // background: rgba(0, 0, 0, 0.6);
+
+  // margin: auto auto;
+  // // border: 2px solid white;
+  color: white;
+  display: flex;
+
+  // justify-content: center;
+  // align-items: center;
+  span {
+    transition: all 0.8s ease;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: rem(50);
+    padding: rem(10);
+    margin-inline: rem(5);
+  }
+
+
+
+}
+
+.order-startwrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menupage-alcoholic_container {
+  @include respond(desktopIpad) {
+    .inner-wrapper {
+      font-family: 'Lato', sans-serif;
+      min-width: 38% !important;
+    }
+
+
+  }
+
+  @include respond(mobile) {
+    .inner-wrapper {
+      min-width: 100% !important;
+      font-family: 'Lato', sans-serif;
+    }
+  }
+}
+.cardheading-maxwidth{
+  @include respond(desktopIpad){
+    max-width: 85%;
+  }
+  @include respond(mobile){
+    max-width: 85%;
+  }
+}
+.menupage-ourwhiskies{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: rem(60);
+  button{
+    background-color: #4D0210;
+    padding: rem(15) rem(114);
+    color: $white;
+    font-size: rem(14);
+    font-family: "Lato";
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: rem(1);
+    outline: none;
+    border: none;
+
+  }
+}
+.cardsubheading-textContainer{
+  margin-bottom: 0.5rem;
+}
+.cardsubheading-text{
+  color: $black;
+  font-style: italic;
+  font-size: rem(8);
+  font-family: 500;
+  font-family: "Lato";
+  background-color: #D9D9D9;
+  padding: rem(3) rem(6);
+  border-radius: rem(100);
+  margin-right: rem(5);
+}

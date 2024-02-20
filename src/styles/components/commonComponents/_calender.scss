@@ -1,0 +1,21 @@
+.custom-date-picker {
+  position: relative;
+  z-index: 2;
+  .react-datepicker-wrapper {
+    input {
+      height: calc(3.5rem + 2px);
+      line-height: 1.25;
+      border-radius: 0.625rem;
+      border: 1px solid #ced4da;
+      width: 100%;
+      padding: 1rem 1.4rem 0 1.3rem;
+      
+      &:focus-visible {
+        border-color: $color-primary !important;
+        box-shadow: rgb(91 45 110 / 25%) 0px 4px 12px !important;
+        outline: none;
+       
+      }
+    }
+  }
+}

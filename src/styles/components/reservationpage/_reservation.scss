@@ -1,0 +1,138 @@
+.reservation-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.92);
+  overflow-y: scroll;
+  display: none;
+  margin: auto;
+  align-items: center;
+
+  &.open {
+    display: flex;
+  }
+
+  @include respond(ipad) {
+    min-height: 100vh;
+  }
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.92);
+  overflow-y: scroll;
+  display: none;
+
+  &.open {
+    display: flex;
+  }
+
+  @include respond(ipad) {
+    min-height: 100vh;
+  }
+}
+
+.modal-container {
+  max-width: rem(520);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto auto;
+  color: white;
+  letter-spacing: rem(1);
+  border: rem(1) solid rgba(255, 255, 255, .6);
+  padding: rem(50) rem(30) rem(65);
+  text-align: center;
+  position: relative;
+
+  @include respond(ipad) {}
+
+  @include respond(mobile) {
+    max-width: 90%;
+    padding: rem(70) rem(30) rem(40);
+  }
+
+  .heading {
+    font-weight: 400;
+    font-size: rem(30);
+    font-style: italic;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.2;
+
+    @include respond(ipad) {}
+
+    @include respond(mobile) {
+      font-size: rem(20);
+    }
+
+  }
+  .contact_heading {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 1.44px;
+
+    @include respond(mobile) {
+      font-size: rem(20);
+    }
+  }
+
+  .subtext {
+    font-size: rem(14);
+    font-weight: 300;
+    padding-top: rem(25);
+    padding-bottom: rem(16);
+    line-height: 1.2;
+
+    @include respond(ipad) {}
+
+    @include respond(mobile) {
+      font-size: rem(12);
+    }
+  }
+
+  .bottomtext {
+    font-size: rem(16);
+    font-weight: 700;
+    text-decoration: underline;
+    line-height: 1.2;
+
+    @include respond(ipad) {}
+
+    @include respond(mobile) {
+      font-size: rem(14);
+    }
+  }
+
+  .close-button {
+    position: absolute;
+    right: rem(20);
+    top: rem(20);
+    z-index: 11;
+    cursor: pointer;
+    color: white;
+
+    x-btn {
+      &:hover {
+        color: $white;
+      }
+    }
+
+    @include respond(ipad) {}
+
+    @include respond(mobile) {
+      max-width: 90%;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "dataURL": [
+   
+    { "url": "/bankImages/childimage1.jpeg" },
+    { "url":"/bankImages/childimage2.jpeg" },
+    { "url": "/bankImages/dinnerdessertsimage1.jpg" },
+    { "url": "/bankImages/dinnerdessertsimage2.jpg" },
+    { "url": "/bankImages/dinnermainsimage3.jpg" },
+    { "url": "/bankImages/dinnermainsimage2.jpg" }
+  ],
+  "socilaMedia":[
+    { "url": "/svg/facebook_white.svg" },
+    { "url": "/svg/twitter_white.svg" },
+    { "url": "/svg/instagram_white.svg" },
+    { "url": "/svg/youtube_white.svg" }
+
+  ]
+
+}

@@ -1,0 +1,158 @@
+.reservation-form {
+  &_container {
+    max-width: rem(700);
+    margin: 0 auto;
+    border: 1px solid $white;
+    position: relative;
+    padding: rem(30) rem(15);
+    border-radius: rem(5);
+    text-align: center;
+    max-height: 90vh;
+    overflow: auto;
+  
+    @include respond(mobile){
+      width: 88vw;
+    }
+   
+    h1 {
+      font-family:  'Kristi', cursive;
+      font-size: rem(70);
+      line-height: 0.8;
+      font-weight: 400;
+      letter-spacing: 0;
+      color: #cfa670;
+      margin-bottom: 0;
+      font-style: italic;
+    }
+    p {
+      font-family: 'Lato', sans-serif;
+      font-size: rem(60);
+      font-weight: 300;
+      letter-spacing: rem(-4);
+      text-transform: uppercase;
+      color: $white;
+      padding-bottom: rem(50);
+    }
+    .close-button {
+      position: absolute;
+      top: rem(20);
+
+      right: rem(20);
+      max-height: rem(20);
+      max-width: rem(20);
+      cursor: pointer;
+    }
+  }
+  &_inner {
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .btn-color {
+      background-color: #cfa670;
+      border: none;
+      padding: rem(6) rem(18);
+      font-size: rem(12);
+      letter-spacing: rem(2);
+      font-family: 'Lato', sans-serif;
+      margin-top: rem(20);
+    }
+    .form-label {
+      color: $white;
+      text-align: left;
+      min-width: 100%;
+      font-size: rem(13);
+      font-family: 'Lato', sans-serif;
+      font-weight: 600;
+      padding-bottom: rem(15);
+      text-transform: uppercase;
+    }
+    .formcontrol {
+      // background: rgba(0, 0, 0, 0.85);
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: rem(2) solid $white;
+      border-radius: 0%;
+      color: $white;
+      padding-inline: 0;
+    }
+    .form-control:focus {
+      color: $white !important;
+      background-color: transparent !important;
+      // border-color: transparent !important;
+      outline: none;
+      box-shadow: none !important;
+    }
+
+    .css-t3ipsp-control {
+      background-color: transparent;
+      color: $white;
+      border: none;
+      outline-color: transparent;
+    }
+    .css-1dimb5e-singleValue {
+      color: $white;
+      min-width: 100%;
+      text-align: left;
+    }
+    .css-1jqq78o-placeholder {
+      grid-area: 1/1/2/3;
+      color: $white;
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+    }
+    .reservation {
+      text-align: left;
+      background: transparent;
+      max-width: 90%;
+      color: $white;
+      margin-left: 0px;
+      border: none;
+      display: flex;
+      border-bottom: 2px solid white;
+      padding-bottom: rem(15);
+      @include respond(mobile) {
+        min-width: 100%;
+        display: flex;
+      }
+    }
+    .specialrequest-textarea {
+      min-height: rem(100);
+    }
+    .css-13cymwt-control {
+      background: transparent;
+      border: none;
+      border-bottom: rem(2) solid $white;
+      border-radius: 0%;
+    }
+    .css-1hb7zxy-IndicatorsContainer {
+      display: none;
+    }
+  }
+  &_wrapper {
+    max-width: rem(700);
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #fff;
+    position: relative;
+    z-index: 3;
+    display: table-cell;
+    vertical-align: middle;
+
+    // background-attachment: fixed;
+    // animation: onschroll;
+  }
+}
+.react-datepicker-wrapper {
+  @include respond(mobile) {
+    min-width: 100%;
+  }
+}
+
+.top-label_space{
+@include respond(mobile){
+  margin-top: rem(30) !important;
+}
+}

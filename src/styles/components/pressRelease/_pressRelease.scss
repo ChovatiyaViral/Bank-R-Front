@@ -1,0 +1,116 @@
+.page_release_section {
+    padding: rem(160) rem(90) rem(50);
+
+    @include respond(ipadMobile) {
+        padding: rem(115) rem(50) rem(50);
+    }
+
+    @include respond(mobile) {
+        padding: rem(65) rem(0) rem(30);
+    }
+
+    h1 {
+        font-family: "Poppins";
+        font-weight: 700;
+        font-size: rem(50);
+        line-height: rem(60);
+        color: #191919;
+        margin-bottom: rem(25);
+        text-transform: capitalize;
+
+        @include respond(ipadMobile) {
+            font-weight: 600;
+            font-size: rem(35);
+            line-height: rem(45);
+            margin-bottom: rem(15);
+        }
+
+        @include respond(mobile) {
+            font-weight: 700;
+            font-size: rem(24);
+            line-height: rem(36);
+            margin-bottom: rem(10);
+        }
+
+        @include respond(smallmobile) {
+            font-size: rem(20);
+            line-height: rem(28);
+            margin-bottom: rem(10);
+        }
+    }
+
+    h2 {
+        font-family: "Poppins";
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: rem(30);
+        color: #191919;
+        margin-bottom: rem(25);
+        align-content: Justified;
+        color: #2D2D2D;
+        text-align: justify;
+
+        @include respond(ipadMobile) {
+            font-weight: 400;
+            font-size: rem(20);
+            line-height: rem(25);
+            margin-bottom: rem(15);
+        }
+
+
+        @include respond(mobile) {
+            font-weight: 500;
+            font-size: rem(20);
+            line-height: rem(30);
+        }
+
+        @include respond(smallmobile) {
+            font-size: rem(16);
+            line-height: rem(22);
+            margin-bottom: rem(10);
+        }
+    }
+
+    .press_content_div {
+        display: block;
+
+
+        img {
+            margin: rem(0) rem(45) rem(10) rem(0);
+            width: 50% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            float: left;
+
+            @include respond(ipadMobile) {
+                width: 100% !important;
+                margin: rem(0) rem(0) rem(15);
+            }
+
+
+        }
+
+        .content_section {
+            text-align: justify;
+
+            p {
+                font-family: "Poppins";
+                font-weight: 400;
+                font-size: rem(16);
+                line-height: rem(24);
+                color: #2D2D2D;
+
+                @include respond(mobile) {
+                    font-weight: 400;
+                    font-size: rem(14);
+                    line-height: rem(21);
+                }
+
+                @include respond(smallmobile) {
+                    font-size: rem(12);
+                    line-height: rem(16);
+                }
+            }
+        }
+    }
+}

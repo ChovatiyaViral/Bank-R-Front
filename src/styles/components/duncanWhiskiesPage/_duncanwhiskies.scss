@@ -1,0 +1,178 @@
+.whiskies_section {
+  display: block;
+  padding: rem(11) rem(25) rem(100);
+  max-width: rem(1600);
+  margin: 0 auto;
+
+  .whiskies_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: rem(39) rem(5) rem(51);
+    position: relative;
+
+    label {
+      color: #323232;
+      font-family: Lato;
+      font-size: rem(40);
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -1.8px;
+      text-transform: uppercase;
+      word-spacing: 5px;
+
+      @include respond(ipad) {
+        font-size: rem(34);
+      }
+    }
+
+    .btn_explore {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #4d0210;
+      position: absolute;
+      right: rem(50);
+      color: #fff;
+      font-family: Lato;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: normal;
+      text-transform: uppercase;
+      padding: rem(14) rem(50);
+      top: 50%;
+      transform: translateY(-50%);
+      text-decoration: none;
+      @include respond(mobile) {
+        right: rem(70);
+      }
+      @include respond(ipad) {
+        right: rem(10);
+        padding: rem(11) rem(30);
+      }
+    }
+  }
+}
+
+.whiskies_card {
+  display: block;
+  width: 100%;
+  max-width: 304px;
+  margin: 0 auto;
+  border-bottom: 1px solid #eee;
+
+  .card_top_section {
+    display: flex;
+    width: 100%;
+    height: rem(304);
+
+    img {
+      width: 100%;
+      height: auto;
+      mix-blend-mode: darken;
+    }
+  }
+
+  .card_details_section {
+    display: block;
+    padding: rem(12) rem(16);
+
+    .card_inner_section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: rem(15);
+
+      .main_title {
+        display: block;
+
+        h2 {
+          color: #121212;
+          font-family: Lato;
+          font-size: rem(12);
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: 0.84px;
+          text-transform: uppercase;
+          margin-bottom: rem(5);
+        }
+
+        h3 {
+          color: rgba(18, 18, 18, 0.8);
+          font-family: Lato;
+          font-size: rem(11);
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.48px;
+        }
+      }
+
+      .price_box {
+        display: block;
+
+        h4 {
+          color: #121212;
+          text-align: right;
+          font-family: Lato;
+          font-size: rem(14);
+          font-style: italic;
+          font-weight: 300;
+          line-height: normal;
+          letter-spacing: 0.84px;
+          text-transform: uppercase;
+          margin-bottom: rem(5);
+        }
+
+        .buy_now_btn {
+          display: flex;
+          align-items: center;
+          gap: rem(3);
+          cursor: pointer;
+          color: #4d0210;
+          font-family: Lato;
+          font-size: rem(12);
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          letter-spacing: 0.72px;
+
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile_whiskies_section {
+  display: block;
+  margin-top: rem(20);
+
+  .whiskies_tab_section {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: rem(20);
+    border-bottom: 1px solid #eee;
+
+    span {
+      color: #323232;
+      font-family: Lato;
+      font-size: rem(14);
+      cursor: pointer;
+      font-weight: 300;
+      line-height: normal;
+      letter-spacing: -0.63px;
+      text-transform: uppercase;
+      padding-bottom: rem(10);
+
+      &.active {
+        font-weight: 700;
+      }
+    }
+  }
+}

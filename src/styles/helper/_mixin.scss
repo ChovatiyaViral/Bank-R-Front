@@ -1,0 +1,397 @@
+// common classes
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flex-x-center() {
+    display: flex !important;
+    justify-content: center;
+  }
+  
+  @mixin flex-between() {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  @mixin flex-end() {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  @mixin flex-y-center() {
+    display: flex;
+    align-items: center;
+  }
+  
+  @mixin flex-column-end() {
+    align-items: flex-end;
+    @include flex-column();
+  }
+  
+  @mixin flex-column() {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  @mixin flex-column-center() {
+    @include flex-x-center();
+    flex-direction: column;
+  }
+  
+  @mixin flex-space-between() {
+    @include flex-column-end();
+    justify-content: space-between;
+  }
+  
+  @mixin respond($breakpoint) {
+    @if $breakpoint==smalldesktop {
+      @media only screen and (min-width: 992px) and (max-width: 1400px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==mediumdesktop {
+      @media only screen and (min-width: 992px) and (max-width: 1919px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==largedesktop {
+      @media only screen and (min-width: 1920px) {
+        @content;
+      }
+    }
+
+    @if $breakpoint==ipadpro {
+      @media only screen and (min-width: 993px) and (max-width: 1024px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==extralargedesktop {
+      @media only screen and (min-width: 2400px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==desktop {
+      @media only screen and (min-width: 992px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==ipad {
+      @media only screen and (min-width: 700px) and (max-width: 992px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==desktopIpad {
+      @media only screen and (min-width: 700px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==ipadProMobile {
+      @media only screen and (max-width: 1120px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==ipadMobile {
+      @media only screen and (max-width: 992px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==mobile {
+      @media only screen and (max-width: 700px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==mediumMobile {
+      @media only screen and (max-width: 576px) {
+        @content;
+      }
+    }
+  
+    @if $breakpoint==smallmobile {
+      @media only screen and (max-width: 360px) {
+        @content;
+      }
+    }
+  }
+  
+  $em-base: 16;
+  
+  //functions
+  @function rem($size, $base: $em-base) {
+    $remSize: $size / $em-base;
+    @return #{$remSize}rem;
+  }
+  
+  $em-base-mobile: 14;
+  
+  @function remMobile($size-mobile, $base-mobile: $em-base-mobile) {
+    $remSizeMobile: $size-mobile / $em-base-mobile;
+    @return #{$remSizeMobile}rem;
+  }
+  
+  @mixin bgNoRepeatCenter() {
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  @mixin bgCover() {
+    background-size: cover;
+    @include bgNoRepeatCenter();
+  }
+  
+  @mixin bgContain() {
+    background-size: contain;
+    @include bgNoRepeatCenter();
+  }
+  
+  @mixin text-truncate-1() {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @mixin text-truncate-multipline() {
+    display: block;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  @mixin text-truncate-3() {
+    @include text-truncate-multipline();
+    -webkit-line-clamp: 3;
+  }
+  
+  @mixin text-truncate-2() {
+    @include text-truncate-multipline();
+    -webkit-line-clamp: 2;
+  }
+  @mixin text-truncate-7() {
+    @include text-truncate-multipline();
+    -webkit-line-clamp: 7;
+  }
+  
+  @mixin text-truncate($breakpoint) {
+    @include text-truncate-multipline();
+    -webkit-line-clamp: $breakpoint;
+  }
+  
+  // position
+  @mixin posFixed() {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+  }
+  
+  @mixin borderLine() {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background-color: $color-primary;
+  }
+  
+  @mixin blackOverlay() {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgba($color: $black, $alpha: 0.5);
+  }
+  @mixin whiteCardHeading() {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: rem(14);
+    color: $grey-77;
+  
+    @include respond(desktopIpad) {
+      line-height: rem(16);
+      margin-bottom: rem(12);
+    }
+    @include respond(mobile) {
+      margin-bottom: rem(7);
+      line-height: rem(17);
+    }
+  }
+  @mixin whiteCardPara() {
+    margin-bottom: 0;
+    font-family: $font-lato;
+    color: $grey-77;
+    text-transform: uppercase;
+    font-size: rem(8);
+    line-height: rem(8);
+  }
+  
+  @mixin textLink() {
+    line-height: 1;
+    font-weight: 300;
+    text-decoration: underline;
+    display: inline-block;
+    text-transform: uppercase;
+    &:not(.locate) {
+      color: $color-light;
+  
+      @include respond(desktop) {
+        font-size: rem(12);
+      }
+      @include respond(ipadMobile) {
+        font-size: rem(14);
+      }
+    }
+  }
+  
+  @mixin inputStyle() {
+    width: 100%;
+    background-color: $grey-49;
+    color: $color-grey;
+    font-weight: 300;
+    box-shadow: none;
+    outline: 0;
+    border: none;
+    border-radius: 5px;
+  
+    @include respond(desktop) {
+      padding: rem(17) rem(31);
+      font-size: rem(14);
+    }
+    @include respond(ipadMobile) {
+      padding: rem(11) rem(15);
+      font-size: rem(12);
+    }
+  
+    &::placeholder {
+      color: $color-grey;
+      text-transform: uppercase;
+    }
+  }
+  
+  @mixin description() {
+    font-weight: 300;
+    color: $color-grey;
+  
+    @include respond(desktop) {
+      font-size: rem(18);
+      line-height: rem(26);
+      margin-bottom: rem(40);
+    }
+    @include respond(ipadMobile) {
+      font-size: rem(12);
+      line-height: rem(18);
+    }
+  }
+  @mixin markdown() {
+    @include respond(desktop) {
+      max-width: rem(840);
+      text-align: left;
+    }
+  
+    ul,
+    ol {
+      // list-style-type: decimal;
+      counter-reset: my-sec-counter;
+      margin-bottom: 2.8571428571rem !important;
+  
+      @include respond(desktop) {
+        padding-left: rem(113) !important;
+      }
+      @include respond(ipadMobile) {
+        padding-left: 3rem;
+      }
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+      li {
+        @include description();
+        margin-bottom: 0 !important;
+        position: relative;
+  
+        &::marker {
+          font-size: 0;
+        }
+        @include respond(desktop) {
+          font-size: 1.2857142857rem !important;
+          line-height: 26px !important;
+        }
+        &:not(:last-child) {
+          @include respond(desktop) {
+            margin-bottom: rem(9) !important;
+          }
+        }
+        @include respond(ipadMobile) {
+          font-size: rem(16) !important;
+          line-height: 26px !important;
+        }
+        &::after {
+          counter-increment: my-sec-counter;
+          content: counter(my-sec-counter) ". ";
+          position: absolute;
+          left: 0;
+          top: 0;
+  
+          @include respond(desktop) {
+            transform: translateX(-43px);
+          }
+          @include respond(ipadMobile) {
+            transform: translateX(-23px);
+          }
+        }
+      }
+    }
+    h3 {
+      color: $color-primary;
+      font-weight: 400;
+      margin-bottom: rem(18);
+  
+      @include respond(desktop) {
+        font-size: rem(18) !important;
+      }
+      @include respond(ipadMobile) {
+        font-size: rem(14) !important;
+      }
+    }
+    p {
+      @include description();
+  
+      @include respond(desktop) {
+        line-height: 30px;
+      }
+      @include respond(ipadMobile) {
+        margin-bottom: rem(40) !important;
+        font-size: rem(16) !important;
+        line-height: 26px !important;
+      }
+      b {
+        color: $color-primary;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  @mixin bgCover(){
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
